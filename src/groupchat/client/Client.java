@@ -5,7 +5,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 /**
- * Ⱥ�Ŀͻ���
+ * 群聊客户端
  * 
  * @author chen7
  * 

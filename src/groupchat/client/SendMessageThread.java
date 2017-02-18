@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
- * ¿Í»§¶Ë·¢ËÍÏûÏ¢Ïß³Ì
+ * å®¢æˆ·ç«¯å‘é€æ¶ˆæ¯çº¿ç¨‹
  * 
  * @author chen7
  * 
@@ -23,13 +23,13 @@ public class SendMessageThread extends Thread {
 	@Override
 	public void run() {
 		try {
-			System.out.println("ÇëÊäÈëÄúÏëÒª·¢ËÍµÄÏûÏ¢£º");
+			System.out.println("è¯·è¾“å…¥æ‚¨æƒ³è¦å‘é€çš„æ¶ˆæ¯");
 			while (true) {
 				String message = StreamUtil.getKey().readLine();
 				if (message == null) {
 					break;
 				} else if (message.trim().equals("")) {
-					System.out.println("²»ÄÜ·¢ËÍ¿ÕÏûÏ¢£¡");
+					System.out.println("ä¸èƒ½å‘é€ç©ºæ¶ˆæ¯");
 					continue;
 				} else {
 					out.println(message);

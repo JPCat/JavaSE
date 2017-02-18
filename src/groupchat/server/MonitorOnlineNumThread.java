@@ -1,7 +1,7 @@
 package groupchat.server;
 
 /**
- * ¼à¿ØÔÚÏßÈËÊıÏß³Ì
+ * ç›‘æ§æœåŠ¡ç«¯åœ¨çº¿äººæ•°çº¿ç¨‹
  * 
  * @author chen7
  * 
@@ -11,7 +11,7 @@ public class MonitorOnlineNumThread extends Thread {
 	@Override
 	public void run() {
 		while (true) {
-			System.out.println("µ±Ç°ÔÚÏßÈËÊıÎª£º" + ServerThread.onlineNum);
+			System.out.println("æœåŠ¡ç«¯åœ¨çº¿äººæ•°ä¸º" + ServerThread.onlineNum);
 			try {
 				Thread.sleep(15000);
 			} catch (InterruptedException e) {

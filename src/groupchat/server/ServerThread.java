@@ -9,7 +9,7 @@ import java.net.Socket;
 import java.util.List;
 
 /**
- * ·şÎñ¶ËÁ¬½Ó¿Í»§¶ËÏß³Ì
+ * ç¾¤èŠæœåŠ¡ç«¯çº¿ç¨‹
  * 
  * @author chen7
  * 
@@ -24,7 +24,7 @@ public class ServerThread extends Thread {
 	public static int onlineNum;
 
 	/**
-	 * ¼à¿ØÓÃ»§ÉÏÏß
+	 * ç›‘æ§ç”¨æˆ·ä¸Šçº¿
 	 * 
 	 * @param serverSocketList
 	 * @param serverSocket
@@ -35,11 +35,11 @@ public class ServerThread extends Thread {
 			this.serverSocketList = serverSocketList;
 			this.clientAddress = serverSocket.getRemoteSocketAddress()
 					.toString().substring(1);
-			System.out.println(clientAddress + "ÉÏÏßÁË");
+			System.out.println(clientAddress + "ä¸Šçº¿äº†");
 			try {
 				for (Socket s : serverSocketList) {
 					out = StreamUtil.getOutFromSocket(s);
-					out.println(clientAddress + "ÉÏÏßÁË");
+					out.println(clientAddress + "ä¸Šçº¿äº†");
 					out.flush();
 				}
 			} catch (IOException e) {
@@ -52,7 +52,7 @@ public class ServerThread extends Thread {
 	}
 
 	/**
-	 * ½ÓÊÕ¡¢·¢ËÍÏûÏ¢
+	 * æ¥æ”¶å‘é€æ¶ˆæ¯
 	 */
 	@Override
 	public void run() {
@@ -79,16 +79,16 @@ public class ServerThread extends Thread {
 			e.printStackTrace();
 		} finally {
 			/**
-			 * ¼à¿ØÓÃ»§ÏÂÏß
+			 * ç›‘æ§ç”¨æˆ·ä¸‹çº¿
 			 */
-			System.out.println(clientAddress + "ÏÂÏßÁË");
+			System.out.println(clientAddress + "ä¸‹çº¿äº†");
 			synchronized (serverSocketList) {
 				serverSocketList.remove(serverSocket);
 				onlineNum--;
 				try {
 					for (Socket s : serverSocketList) {
 						out = StreamUtil.getOutFromSocket(s);
-						out.println(clientAddress + "ÏÂÏßÁË");
+						out.println(clientAddress + "ä¸‹çº¿äº†");
 						out.flush();
 					}
 				} catch (IOException e) {

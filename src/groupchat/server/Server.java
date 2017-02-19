@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class Server {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 		ServerSocket server = new ServerSocket(11111);
 		List<Socket> serverSocketList = new ArrayList<Socket>();

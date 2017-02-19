@@ -1,7 +1,7 @@
 package groupchat.server;
 
 /**
- * 监控服务端在线人数线程
+ * 服务端监控在线人数线程
  * 
  * @author chen7
  * 

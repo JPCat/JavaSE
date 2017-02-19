@@ -9,7 +9,7 @@ import java.net.Socket;
 import java.util.List;
 
 /**
- * 群聊服务端线程
+ * 服务端群聊线程
  * 
  * @author chen7
  * 
@@ -65,11 +65,11 @@ public class ServerThread extends Thread {
 				} else if (message.trim().equals("endup")) {
 					break;
 				} else {
-					System.out.println(clientAddress + "˵:" + message);
+					System.out.println(clientAddress + ":" + message);
 					synchronized (serverSocketList) {
 						for (Socket s : serverSocketList) {
 							out = StreamUtil.getOutFromSocket(s);
-							out.println(clientAddress + "˵:" + message);
+							out.println(clientAddress + ":" + message);
 							out.flush();
 						}
 					}

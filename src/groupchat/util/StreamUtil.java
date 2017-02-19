@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
- * 流工具类
+ * 娴佸伐鍏风被
  * 
  * @author chen7
  * 
@@ -18,7 +18,7 @@ public class StreamUtil {
 	}
 
 	/**
-	 * 获取键盘输入
+	 * 鎺ユ敹閿洏杈撳叆
 	 * 
 	 * @return
 	 */
@@ -27,7 +27,7 @@ public class StreamUtil {
 	}
 
 	/**
-	 * 从Socket中获取输入流
+	 * 浠嶴ocket涓幏寰楄緭鍏ユ祦
 	 * 
 	 * @param socket
 	 * @return
@@ -40,7 +40,7 @@ public class StreamUtil {
 	}
 
 	/**
-	 * 从Socket中获取输出流
+	 * 浠嶴ocket涓幏寰楄緭鍑烘祦
 	 * 
 	 * @param socket
 	 * @return
